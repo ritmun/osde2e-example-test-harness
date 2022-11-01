@@ -20,8 +20,6 @@ linters:
     - gocyclo
     - gofmt
     - ineffassign
-    - lll
-    - misspell
     - nakedret
     - noctx
     - nolintlint
