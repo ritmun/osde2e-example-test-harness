@@ -1,6 +1,4 @@
 linters-settings:
-  gocyclo:
-    min-complexity: 15
   goimports:
     local-prefixes: github.com/openshift/osde2e-example-test-harness
   nolintlint:
@@ -17,7 +15,6 @@ linters:
     - exportloopref
     - goconst
     - gocritic
-    - gocyclo
     - gofmt
     - ineffassign
     - nakedret
