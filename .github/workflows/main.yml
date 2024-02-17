@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Clone
-        run: |
+       run: |
           git clone https://github.com/openshift-eng/ocp-build-data/
           git branch --list | grep openshift-
