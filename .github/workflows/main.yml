@@ -7,5 +7,7 @@ jobs:
     steps:
      - name: Clone
        run: |
-          git clone git@github.com:openshift/origin.git   \
-          git branch --list | grep openshift-
+          git clone git@github.com:openshift/origin.git  
+     - name: Get Tags
+       run: |
+          git branch --list | grep openshift- 
