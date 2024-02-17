@@ -7,4 +7,4 @@ jobs:
     steps:
      - name: Run
        run: |
-         pwd &&  bash ../../boilerplate/action.sh
+         pwd &&  bash ../boilerplate/action.sh
