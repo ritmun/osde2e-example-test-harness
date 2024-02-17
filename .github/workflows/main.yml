@@ -2,12 +2,8 @@ on: workflow_dispatch
 name: Create Branches
 jobs:
   build:
-    name: Create Branches
+    name: Create Version Branches
     runs-on: ubuntu-latest
     steps:
-     - name: Clone
-       run: |
-          git clone https://github.com/openshift-eng/ocp-build-data.git
-     - name: Get Tags
-       run: |
-          git branch --list | grep openshift- 
+     - name: Run
+       run: bash boilerplate/action.sh
