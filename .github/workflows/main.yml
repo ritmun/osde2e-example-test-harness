@@ -6,4 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Run
-       run: bash ../../boilerplate/action.sh
+       run: |
+         pwd &&  bash ../../boilerplate/action.sh
