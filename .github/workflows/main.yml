@@ -7,7 +7,7 @@ jobs:
     steps:
      - name: Clone
        run: |
-          git clone git@github.com:openshift/origin.git  
+          git clone https://github.com/openshift-eng/ocp-build-data.git
      - name: Get Tags
        run: |
           git branch --list | grep openshift- 
