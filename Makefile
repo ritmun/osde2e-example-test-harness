@@ -1,12 +1,10 @@
-DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
-OUT_FILE := "$(DIR)osde2e-example-test-harness"
- 
-# to ignore vendor directory
-GOFLAGS=-mod=mod
-build:
-	CGO_ENABLED=0 go test -v -c
+FIPS_ENABLED=true
+HARNESS_TIMEOUT=690
 
-lint:
-	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(shell go env GOPATH)/bin
-	(cd "$(DIR)"; golangci-lint run -c .ci-operator.yaml ./...)
-
+include boilerplate/generated-includes.mk
+SHELL := /usr/bin/env bash
+# needed for internal saas file as boilerplate checks commercial app-interface saas file hashes
+export SKIP_SAAS_FILE_CHECKS=y
+.PHONY: boilerplate-update
+boilerplate-update:
+	@boilerplate/update
